@@ -46,10 +46,8 @@ body{
         right: 70%;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
-
         &--top{           
             padding: 15px;
-
             img{
                 vertical-align: middle;
                 width: 50px;
@@ -70,8 +68,9 @@ body{
         }
 
         &--bottom {
-           padding: 30px;
-           line-height: 40px;
+           padding: 12px;
+           line-height: 30px;
+           font-size: 15px;
 
             li{
                 position: relative;
@@ -85,8 +84,8 @@ body{
                 border-radius: 50%;
                 background-color: pink;
                 position: absolute;
-                right: 110px;
-                top: 15.5px;
+                right: 100px;
+                top: 10px;
             }
            }
         }
@@ -178,8 +177,7 @@ body{
 }
         
     
-
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 1028px){
     .todolist__left{
         display: none;
     }
@@ -191,7 +189,6 @@ body{
     .todolist__right{
         width: 100%;
         left: -5px;
-        
             &__add{
                 width: 100%;
                 padding: 20px;
