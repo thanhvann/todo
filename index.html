@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <div class="todolist" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1000"  >
+        
+        
+        <div class="todolist__left">
+            <div class="todolist__left--top">
+                    <img src="https://f7-zpcloud.zdn.vn/246156673251399928/bfee130586e65fb806f7.jpg" alt="Avatar">
+                    <span>Do-it</span>
+            </div>
+
+            <div class="todolist__left--bottom">
+                <p> <i class="fa-solid fa-calendar-week"></i> Today tasks</p>
+                <ul>
+                    <li> <img src="" alt=""> Personal</li>
+                    <li>Freelance</li>
+                    <li>Work</li>
+                </ul>
+                <p> <i class="fa-solid fa-clipboard-list"></i> Scheduled tasks</p>
+                <p> <i class="fa-sharp fa-solid fa-gear"></i> Settings</p>
+        </div>
+        </div>
+
+        <div class="todolist__right">
+            <div id="todo-text"  class="todolist__right__add">
+                <h2>To Do List</h2>
+                <input type="text" id="submit" placeholder="What is your next task?">
+                <button>Add</button>
+            </div>
+        
+            <div id="myUL" class="todolist__right__list">
+                <ul>
+                <li>Hit the gym</li> 
+                </ul>
+                <div class="todolist__right__list--edit">
+                    <i id="edit" class="fa-solid fa-pen-to-square"></i> 
+                    <i id="delete" class="fa-solid fa-trash"></i> 
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <!-- https://hocwebchuan.com/reference/tester/responsive.php -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
