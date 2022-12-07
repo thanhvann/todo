@@ -10,11 +10,17 @@
 }
 
 body{
-    background-color: #fbf0ee;
+    // background-color: #fbf0ee;
+    background-image: url(../img/john-fowler-RsRTIofe0HE-unsplash.jpg) ; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     flex-wrap: wrap;
 }
 
@@ -24,21 +30,22 @@ body{
     background-size:cover;
     object-fit: fill;
     font-family: "Source Sans Pro", sans-serif;
-    border: 4.5px solid #F79E89 ;
+    border: 3px solid #F79E89 ;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    height: 60%;
+    width: 45%;
+    height: 65%;
     position: relative;
-    
+    box-shadow: 0 0 9px #f79e89;
+    animation: myAnim 2s ease 0s 1 normal forwards;
     
     
     &__left{
         color: #b46c5c;
         font-size: 16px;
-        border-right: 3px solid #F79E89 ;
+        border-right: 2px solid #F79E89 ;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -61,7 +68,7 @@ body{
                 font-family: "Pacifico", cursive;
                 
             }
-            border-bottom: 3px solid #F79E89;
+            border-bottom: 2px solid #F79E89;
             
             
 
@@ -84,8 +91,8 @@ body{
                 border-radius: 50%;
                 background-color: pink;
                 position: absolute;
-                right: 100px;
-                top: 10px;
+                right: 105%;
+                top: 32%;
             }
            }
         }
@@ -130,14 +137,16 @@ body{
                 font-family: "Pacifico", cursive;
                 font-size: 30px;
                 padding: 7px;
-                
+                -webkit-animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+	            animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+            
             }
         
         
         }
 
         &__list{
-            padding: 6px;
+            padding: 4px;
             width: 90%;
             // padding: 5px;
             margin-left: 20px;
@@ -169,8 +178,8 @@ body{
                 border-radius: 50%;
                 background-color: pink;
                 position: absolute;
-                right: 99px;
-                top: 9px;
+                right: 89%;
+                top: 38%;
             }
         }
     }
@@ -188,10 +197,10 @@ body{
 
     .todolist__right{
         width: 100%;
-        left: -5px;
+        left: 0;
             &__add{
                 width: 100%;
-                padding: 20px;
+                margin-left: 4px;
                
                 button{
                     padding: 6px;
@@ -204,16 +213,65 @@ body{
                     width: 100%;
                 }
               
-                h2{
-                    text-align: center;
-                }
             }   
             
             &__list{
                 text-align: center;
-                width: 95%;
+                width: 85%;
+                background-color: transparent;
+                border-bottom: 2px solid;
+                border-radius: 0;
+                margin: 0 9% 0 9%;
                 
             }
     }
 }
 
+@keyframes myAnim {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes text-pop-up-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @keyframes text-pop-up-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  
